@@ -46,6 +46,7 @@ SourceArt/**/*.tga
 
 #Binary Files
 Binaries/*
+!Binaries/ThirdParty
 
 # Builds
 Build/*
@@ -66,6 +67,6 @@ Intermediate/*
 DerivedDataCache/*
 
 #ZMQ Library Plugin
-!Binaries/ThirdParty/zmqLibrary/Win64/libzmq-mt-4_3_1.dll
+!Binaries/ThirdParty/**/*.dll
 !Source/ThirdParty/zmqLibrary/x64/Release/libzmq-mt-4_3_1.dll
-!Source/ThirdParty/zmqLibrary/x64/Release/libzmq-mt-4_3_1.li
+!Source/ThirdParty/zmqLibrary/x64/Release/libzmq-mt-4_3_1.lib
