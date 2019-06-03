@@ -2,7 +2,7 @@
 	"FileVersion": 3,
 	"Version": 1,
 	"VersionName": "1.0",
-	"FriendlyName": "zmq",
+	"FriendlyName": "zmque",
 	"Description": "",
 	"Category": "Other",
 	"CreatedBy": "",
@@ -15,8 +15,8 @@
 	"Installed": false,
 	"Modules": [
 		{
-			"Name": "zmq",
-			"Type": "Developer",
+			"Name": "zmque",
+			"Type": "Runtime",
 			"LoadingPhase": "Default"
 		}
 	]

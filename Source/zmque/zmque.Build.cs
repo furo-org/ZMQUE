@@ -2,9 +2,9 @@
 
 using UnrealBuildTool;
 
-public class zmq : ModuleRules
+public class zmque : ModuleRules
 {
-	public zmq(ReadOnlyTargetRules Target) : base(Target)
+	public zmque(ReadOnlyTargetRules Target) : base(Target)
 	{
 		PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
 		

@@ -10,7 +10,7 @@
 void FZmqModule::StartupModule()
 {
 	// Get the base directory of this plugin
-	FString BaseDir = IPluginManager::Get().FindPlugin("zmq")->GetBaseDir();
+	FString BaseDir = IPluginManager::Get().FindPlugin("zmque")->GetBaseDir();
 
 	// Add on the relative location of the third party dll and load it
 	FString LibraryPath;
@@ -41,4 +41,4 @@ void FZmqModule::ShutdownModule()
 
 #undef LOCTEXT_NAMESPACE
 	
-IMPLEMENT_MODULE(FZmqModule, zmqmod)
+IMPLEMENT_MODULE(FZmqModule, zmque)

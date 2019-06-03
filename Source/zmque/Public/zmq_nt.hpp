@@ -430,7 +430,6 @@ namespace zmq
     class context_t
     {
         friend class socket_t;
-        bool valid = false;
     public:
         inline bool isValid() { return valid; }
         inline context_t ()
@@ -498,6 +497,7 @@ namespace zmq
     private:
 
         void *ptr;
+        bool valid = false;
 
         context_t (const context_t&) ZMQ_DELETED_FUNCTION;
         void operator = (const context_t&) ZMQ_DELETED_FUNCTION;
@@ -529,7 +529,6 @@ namespace zmq
     {
         friend class monitor_t;
         friend class poller_t;
-        bool valid = false;
     public:
         inline bool isValid() { return valid; }
         inline socket_t(context_t& context_, int type_)
@@ -731,6 +730,7 @@ namespace zmq
 
         void *ptr;
         void *ctxptr;
+        bool valid = false;
 
         socket_t (const socket_t&) ZMQ_DELETED_FUNCTION;
         void operator = (const socket_t&) ZMQ_DELETED_FUNCTION;
