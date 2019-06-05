@@ -25,7 +25,7 @@ void FZmqModule::StartupModule()
 
 	if (!ZmqLibraryHandle)
 	{
-		FMessageDialog::Open(EAppMsgType::Ok, LOCTEXT("ThirdPartyLibraryError", "Failed to load zmq library"));
+//		FMessageDialog::Open(EAppMsgType::Ok, LOCTEXT("ThirdPartyLibraryError", "Failed to load zmq library"));
 	}
 }
 
