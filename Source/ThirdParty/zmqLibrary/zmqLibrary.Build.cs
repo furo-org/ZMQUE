@@ -13,9 +13,8 @@ public class zmqLibrary : ModuleRules
 		if (Target.Platform == UnrealTargetPlatform.Win64)
 		{
 			// Add the import library
-			PublicLibraryPaths.Add(Path.Combine(ModuleDirectory, "x64", "Release"));
-			PublicAdditionalLibraries.Add("libzmq-mt-4_3_1.lib");
-      Console.WriteLine("... ZMQ Public Additional Library Path -> " + Path.Combine(ModuleDirectory, "x64", "Release"));
+			PublicAdditionalLibraries.Add(Path.Combine(ModuleDirectory, "x64", "Release","libzmq-mt-4_3_1.lib"));
+            //Console.WriteLine("... ZMQ Public Additional Library Path -> " + Path.Combine(ModuleDirectory, "x64", "Release"));
 
       // Delay-load the DLL, so we can load it from the right place first
       PublicDelayLoadDLLs.Add("libzmq-mt-4_3_1.dll");
