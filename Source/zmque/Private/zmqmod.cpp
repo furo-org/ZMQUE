@@ -35,7 +35,8 @@ void FZmqModule::ShutdownModule()
 	// we call this function before unloading the module.
 
 	// Free the dll handle
-	FPlatformProcess::FreeDllHandle(ZmqLibraryHandle);
+	if(ZmqLibraryHandle)
+		FPlatformProcess::FreeDllHandle(ZmqLibraryHandle);
 	ZmqLibraryHandle = nullptr;
 }
 
