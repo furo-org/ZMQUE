@@ -12,9 +12,11 @@ public class zmqLibrary : ModuleRules
     if (Target.Platform == UnrealTargetPlatform.Win64)
     {
       // Add the import library
-      PublicAdditionalLibraries.Add(Path.Combine(ModuleDirectory, "x64", "Release","libzmq-mt-4_3_1.lib"));
+      String LibName = "libzmq-mt-4_3_1";
+      PublicAdditionalLibraries.Add(Path.Combine(ModuleDirectory, "x64", "Release",LibName+".lib"));
       // Delay-load the DLL, so we can load it from the right place first
-      PublicDelayLoadDLLs.Add("libzmq-mt-4_3_1.dll");
+      PublicDelayLoadDLLs.Add(LibName+".dll");
+      RuntimeDependencies.Add("$(TargetOutputDir)/"+LibName+".dll",Path.Combine(ModuleDirectory,"x64","Release",LibName+".dll"));
     }
     else if(Target.Platform == UnrealTargetPlatform.Linux){
       PublicSystemLibraries.Add("zmq");
