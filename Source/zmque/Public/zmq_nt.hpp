@@ -42,6 +42,9 @@
     #define ZMQ_EXPLICIT
 #endif
 
+#if defined _WIN32
+#define WIN32_LEAN_AND_MEAN
+#endif
 #include <zmq.h>
 
 #include <algorithm>
